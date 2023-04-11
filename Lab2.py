@@ -7,7 +7,7 @@ def main():
     print(calc_min_max_temperature(num_list))
 
 def display_main_menu():
-    print("enter some numbers separated by commas")
+    print("enter some numbers separated by commas 1")
     return
 
 def get_user_input():
