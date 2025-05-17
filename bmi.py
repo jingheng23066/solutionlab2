@@ -16,10 +16,12 @@ def calculate_bmi(height, weight):
 def display_main_menu():
     print("enter height followed by weight separated by commas")
     return
+
 def get_user_input():
     numInp = input()
     inpList = numInp.split(",")
     return inpList
+
 def main():
     print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
     display_main_menu()
