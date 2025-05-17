@@ -1,4 +1,4 @@
-
+import statistics
 
 def main():
     print("ET0735 (DEVOps for AIoT) - Lab 2 Introduction to Python Programming")
@@ -8,7 +8,8 @@ def main():
     print("Average Temperature:", calc_average_temperature(num_list))
     print("Min and Max Temperature:", calc_min_max_temperature(num_list))
     print("Sorted Temperature List:", sort_temperature_list(num_list))
-
+    print("Median Temperature:", calc_median_temperature(num_list)) 
+    print("Median Temperature (using statistics module):", calc_median_temperature_stat(num_list))
 
 def display_main_menu():
     print("enter some numbers separated by commas : ")
@@ -29,6 +30,19 @@ def calc_min_max_temperature(tempList):
 
 def sort_temperature_list(tempList):
     return sorted(tempList)
+
+def calc_median_temperature(tempList):
+    sorted_list = sorted(tempList)
+    n = len(sorted_list)
+    mid = n // 2
+    if n % 2 == 0:
+        return (sorted_list[mid - 1] + sorted_list[mid]) / 2
+    else:
+        return sorted_list[mid]
+
+
+def calc_median_temperature_stat(tempList):
+    return statistics.median(tempList)
 
 
 
