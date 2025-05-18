@@ -22,7 +22,7 @@ def get_user_input():
     return est_list
 
 def calc_average_temperature( tempList):
-    return sum(tempList)/len(tempList)
+    return round(sum(tempList)/len(tempList), 2)
 
 def calc_min_max_temperature(tempList):
     min_max_list = [min(tempList), max(tempList)]
@@ -36,7 +36,7 @@ def calc_median_temperature(tempList):
     n = len(sorted_list)
     mid = n // 2
     if n % 2 == 0:
-        return (sorted_list[mid - 1] + sorted_list[mid]) / 2
+        return round(((sorted_list[mid - 1] + sorted_list[mid]) / 2), 2)
     else:
         return sorted_list[mid]
 
